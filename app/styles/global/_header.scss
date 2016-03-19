@@ -5,8 +5,9 @@ header {
 	&#main-header {
 		width: 100%;
 		max-width: 810px;
-		margin-left: -400px;
-		@include ab( 20px, 50%, n, n );
+		/* margin-left: -400px; */
+		margin: 20px auto 0;
+		/* @include ab( 20px, 50%, n, n ); */
 
 		.main-nav {
 			text-align: center;
