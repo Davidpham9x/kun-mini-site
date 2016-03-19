@@ -1,0 +1,31 @@
+/*
+** HEADER
+*/
+header {
+	&#main-header {
+		width: 100%;
+		max-width: 810px;
+		margin-left: -400px;
+		@include ab( 20px, 50%, n, n );
+
+		.main-nav {
+			text-align: center;
+
+			a {
+				font-family: $font-uvnR;
+				font-size: 16px;
+				color: #005146;
+				padding: 10px 30px;
+				display: inline-block;
+				@include border-radius( 19px, 19px, 19px, 19px );
+				&:hover, &.active {
+					background-color: #ffeb0c;
+					/* background: -moz-linear-gradient(left,  rgba(245,241,155,1) 0%, rgba(245,241,155,0) 100%);
+					background: -webkit-linear-gradient(left,  rgba(245,241,155,1) 0%,rgba(245,241,155,0) 100%);
+					background: linear-gradient(to right,  rgba(245,241,155,1) 0%,rgba(245,241,155,0) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f19b', endColorstr='#00f5f19b',GradientType=1 ); */
+				}
+			}
+		}
+	}
+}
