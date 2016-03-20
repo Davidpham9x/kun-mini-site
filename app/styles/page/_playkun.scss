@@ -1,0 +1,283 @@
+.play-with-kun {
+    background: url("../images/bg-sky.png") repeat-x top;
+	.main-content {
+		text-align: center;
+		.heading {
+			margin: 0 auto 40px;
+		    text-indent: -9999px;
+		    background: url("../images/playkun/heading.png") no-repeat;
+		    width: 245px;
+		    height: 52px;
+			@include respond-to(mobile){
+				margin-bottom: 20px;
+			}
+		}
+		.note {
+			font-size: 18px;
+			color: #147ec8;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.wrap-kun-step {
+			padding: 40px 0;
+			background: url("../images/page-parent/bg-mount.png") center bottom no-repeat;
+			@include respond-to(mobile){
+				background: url("../images/page-parent/bg-mount.png") 60px 110px no-repeat;
+			}
+			
+			.wrap-content {
+				position: relative;
+				margin: 0 auto;
+				max-width: 1130px;
+				min-height: 440px;
+				@include respond-to(ipad){
+					min-height: 540px;
+				}
+				@include respond-to(mobile){
+					padding-top: 20px;
+				}
+			}
+
+			.kun-step {
+				position: absolute;
+				width: 100%;
+				@include respond-to(mobile){
+					position: static;
+					display: block;
+					margin: 0 auto;
+				}
+				.wrap {
+					position: relative;
+					h3 {
+						font-size: 16px;
+						color: #ff0000;
+						font-weight: bold;
+						text-transform: uppercase;	
+					}
+					p {
+						font-size: 12px;
+						color: #147ec8;
+						font-weight: bold;
+						@include  respond-to(mobile){
+						    line-height: 16px;
+						}
+					}
+				    &:after {
+				    	content: '';
+				    	position: absolute;
+				    }
+				}
+			}
+			.kun-1 {
+			    background: url("../images/playkun/kun1.png") no-repeat;
+			    max-width: 349px;
+			    height: 314px;
+			    padding: 50px 4%;
+				background-size: 100%;
+			    h3 {
+			    	padding-left: 30px;
+			    }
+			    p {
+			    	max-width: 65%;
+			    	margin: 10px auto;
+				    padding-left: 8%;
+			    }
+			    .wrap:after {
+				    right: -28%;
+				    top: 105px;
+			    	@include spritePos(12,0,55px,50px);
+			    	@include respond-to(ipad){    
+		    		    left: 34%;
+					    top: 243px;
+				    	@include spritePos(20,0,40px,55px);
+			    	}
+			    	@include respond-to(mobile){
+		    		    right: 8%;
+					    top: 215px;
+				    	@include spritePos(18,0,40px,55px);
+			    	}
+			    }
+			}
+			.kun-2 {
+			    background: url("../images/playkun/kun2.png") no-repeat;
+			    max-width: 349px;
+			    height: 337px;
+			    top: 140px;
+			    left: 22%;
+			    padding: 70px 30px 0;
+				background-size: 100%;
+		    	@include respond-to(ipad){
+				    top: 263px;
+				    left: 15%;
+		    	}
+		    	@include respond-to(mobile){
+				    margin-top: -50px;
+		    	}
+			    h3 {
+			    	padding-left: 11%;
+			    }
+			    p {
+			    	max-width: 44%;
+			    	margin-top: 50px;
+			    	padding-left: 12%;
+			    }
+			    .wrap:after {
+				    right: -23%;
+				    top: 73px;
+			    	@include spritePos(14,0,55px,50px);
+			    	@include respond-to(ipad){    
+			    		top: -20px;
+			    		right: -12%;
+			    	}
+			    	@include respond-to(mobile){    
+			    		left: 8%;
+					    top: 230px;
+				    	@include spritePos(20,0,40px,55px);
+			    	}
+			    }
+			}
+			.kun-3 {
+			    background: url("../images/playkun/kun3.png") no-repeat;
+			    max-width: 370px;
+			    height: 319px;
+			    left: 45%;
+				background-size: 100%;
+			    padding: 60px 0 0;
+		    	@include respond-to(ipad){
+				    left: 38%;
+		    	}
+			    h3 {
+			    	padding-right: 4%;
+			    }
+			    .wrap:after {
+				    top: 72px;
+				    right: -9%;
+			    	@include spritePos(16,0,55px,50px);
+			    	@include respond-to(ipad){
+					    top: 172px;
+					    right: 2%;
+			    	}
+			    	@include respond-to(mobile){
+		    		    right: 8%;
+					    top: 215px;
+				    	@include spritePos(22,0,40px,55px);
+			    	}
+			    }
+			    .content {
+				    max-width: 47%;
+				    margin-top: 12px;
+				    padding-left: 19%;
+				    margin-left: 38%;
+				    @include respond-to(mobile){
+			    	    max-width: 50%;
+					    margin-left: 36%;
+				    }
+				    img {
+				    	max-width: 50%;
+				    }
+				    p {
+				    	margin: 0;
+				    	/*margin-bottom: 60px;
+					    @include respond-to(mobile){
+						    margin-bottom: 50px;
+					    }*/
+				    }
+			    }
+			}
+			.kun-4 {
+			    background: url("../images/playkun/kun4.png") no-repeat;
+			    max-width: 349px;
+			    height: 323px;
+			    right: 0;
+			    top: 140px;
+				background-size: 100%;
+			    padding: 65px 30px 0;
+		    	@include respond-to(ipad){
+				    top: 263px;
+				    /*left: 15%;*/
+		    	}
+			    h3 {
+			    	padding-right: 13%;
+			    }
+			    p {    
+			    	max-width: 86%;
+				    margin-top: 5px;
+				    padding-left: 26%;
+			    }
+			}
+		}
+	}
+	.block-video {
+		background: #a6dff9;
+		padding: 30px 0;
+		text-align: center;
+		.wrap-content {
+			max-width: 850px;
+			margin: 0 auto;
+			padding: 25px 0 45px;
+			background: #fff5eb;
+			position: relative;
+			@include border-radius(20px);
+			@include respond-to(ipad) {
+				margin: 0 20px;
+			}
+			@include respond-to(mobile) {
+				/*margin: 0 10px;*/
+				background: none
+
+			}
+			&:before {
+				content:'';
+				position: absolute;
+				background: url('../images/playkun/video-left.png') no-repeat;
+				width: 145px;
+				height: 358px;
+				top: 0;
+				left: -133px;
+				@include respond-to(ipad) {
+					display: none;
+				}
+				@include respond-to(mobile) {
+					display: none;
+				}
+			}
+			img {
+				border: 3px solid #fff;
+				width: 100%;
+				max-width: 600px;
+				margin: 0 20px;
+				@include border-radius(20px);
+				@include box-shadow(-5px,5px,20px,#aaa);
+				@include respond-to(mobile){
+				    /*max-width: 100%;*/
+				    width: 88%;
+				}
+			}
+			&:after {
+				content:'';
+				position: absolute;
+				background: url('../images/playkun/video-right.png') no-repeat;
+				width: 146px;
+				height: 491px;
+				top: 0;
+				right: -115px;
+				@include respond-to(ipad) {
+					display: none;
+				}
+				@include respond-to(mobile) {
+					display: none;
+				}
+			}
+		}
+		h3 {
+			font-weight: bold;
+			font-size: 18px;
+			text-transform: uppercase;
+			color: #147ec8;
+			margin-bottom: 20px;
+			@include respond-to(mobile) {
+				font-size: 16px;
+			}
+		}
+	}
+}

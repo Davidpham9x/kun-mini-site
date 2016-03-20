@@ -27,7 +27,7 @@ var isMobile = {
         init: function() { //initialization code goes here
             $.support.cors = true;
             this.initFormElements();
-            this.initSliderCollectionVR();
+            // this.initSliderCollectionVR();
         },
 
         initFormElements: function() {

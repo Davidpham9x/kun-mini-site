@@ -49,6 +49,9 @@
 	.main-content {
 
 	    padding-bottom: 110px;
+		@include respond-to(ipad){
+		    padding-bottom: 380px;
+		}
 		@include respond-to(mobile){
 		    padding-bottom: 290px;
 		}
