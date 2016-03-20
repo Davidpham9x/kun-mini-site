@@ -1,104 +1,303 @@
 .page-home {
-	&.type-kid {
-		.main-content {
-			text-align: center;
-			background: url('../images/global/main-bg.jpg') center center no-repeat;
-			/* width: 100%;
-			height: 100%; */
-			background-size: 100% 100%;
-			position: relative;
-			top: 0;
-			padding-bottom: 40px;
-
-			.heading {
-				margin: 0 auto;
-				text-indent: -9999px;
-				background: url('../images/global/heading-type-kid.png') no-repeat;
-				width: 833px;
-				height: 119px;
-			}
-			.kun-products {
-				padding-top: 10px;
-				/* margin: 10px auto 0; */
-			}
-			.wrap-video-intro {
-				.title {
-					margin: 0 auto;
-					text-indent: -9999px;
-					background: url('../images/global/title-video-intro.png') no-repeat;
-					width: 279px;
-					height: 44px;
-				}
-				.inner {
-					width: 100%;
-					max-width: 1048px;
-					/* height: 243px; */
-					border: 4px solid #fff;
-					background: url('../images/global/bg-transparent-1.png') repeat;
-					padding: 40px;
-					margin: 0 auto;
-					position: relative;
-					top: -4px;
-					/* padding-bottom: 42px; */
-					@include border-radius( 12px, 12px, 12px, 12px );
-
-					.list-video {
-						padding: 0;
-						margin: 0;
-						list-style: none;
-						overflow: hidden;
-
-						.video {
-							float: left;
-							width: 33.333333%;
-
-							.thumbnail {
-								img {
-									width: 100%;
-									max-width: 260px;
-									border: 3px solid #fff;
-									@include border-radius( 10px, 10px, 10px, 10px );
-								}
-								.icon-play {
-
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		.wrap-collect-toy {
-			text-align: center;
-			background: url('../images/global/vr-bg.jpg') center center no-repeat;
-			background-size: 100% 100%;
-			position: relative;
-
-			.wrap-heading {
-				.logo-vr-toy {
-
-				}
-				.title {
-					text-indent: -9999px;
-					background: url('../images/global/title-vr-toy.png') no-repeat;
-					width: 287px;
-					height: 81px;
-					display: block;
-				}
-			}
-			.wrap-list-collection {
-				.list-collection {
-					padding: 0;
-					margin: 0;
-					list-style: none;
-					.item {
-						display: inline-block;
-						img {
-
-						}
-					}
-				}
-			}
-		}
-	}
+    .main-content {
+        text-align: center;
+        background: url('../images/global/main-bg.png') center bottom no-repeat;
+        /* width: 100%;
+		height: 100%; */
+        background-size: 100%;
+        position: relative;
+        top: 0;
+        padding: 40px 0;
+        @include respond-to(mobile) {
+            background: url('../images/global/main-bg-mob.jpg') center bottom no-repeat;
+            background-size: 100%;
+            padding-bottom: 290px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            background: url('../images/global/character-left.png') no-repeat;
+            width: 358px;
+            height: 340px;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+            @include respond-to(mobile) {
+                background: url("../images/global/character-left.png") no-repeat right;
+                width: 174px;
+                background-size: 138%;
+                bottom: -55px;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            background: url('../images/global/character-right.png') no-repeat;
+            width: 358px;
+            height: 350px;
+            bottom: 0;
+            right: 0;
+            z-index: 0;
+            @include respond-to(mobile) {
+                background: url("../images/global/character-right.png") no-repeat;
+                width: 204px;
+                bottom: -110px;
+                background-size: 139%;
+            }
+        }
+        /*.heading {
+			margin: 0 auto;
+			text-indent: -9999px;
+			background: url('../images/global/heading-type-kid.png') no-repeat;
+			width: 833px;
+			height: 119px;
+		}*/
+        .kun-products {
+            margin: 10px auto 0;
+            display: block;
+            @include respond-to(ipad) {
+                width: 100%;
+                margin: 0 auto;
+            }
+            @include respond-to(mobile) {
+                width: 100%;
+            }
+        }
+        .wrap-video-intro {
+            .title {
+                margin: 0 auto;
+                text-indent: -9999px;
+                background: url('../images/global/title-video-intro.png') no-repeat;
+                width: 279px;
+                height: 44px;
+            }
+            .inner {
+                width: 100%;
+                max-width: 1048px;
+                /* height: 243px; */
+                border: 4px solid #fff;
+                background: url('../images/global/bg-transparent-1.png') repeat;
+                padding: 40px;
+                margin: 0 auto;
+                position: relative;
+                top: -4px;
+                z-index: 10;
+                /* padding-bottom: 42px; */
+                @include border-radius( 12px,
+                12px,
+                12px,
+                12px);
+                @include respond-to(mobile) {
+                    padding: 0;
+                    border: none;
+                    background: none
+                }
+                .list-video {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    overflow: hidden;
+                    .video {
+                        display: inline-block;
+                        width: 33%;
+                        vertical-align: middle;
+                        @include respond-to(mobile) {
+                            width: 100%;
+                        }
+                        &.center {
+                            .thumbnail img {
+                                width: 100%;
+                            }
+                        }
+                        .thumbnail {
+                            @include respond-to(mobile) {
+                                margin: 10px 0;
+                            }
+                            img {
+                                width: 74%;
+                                max-width: 260px;
+                                border: 3px solid #fff;
+                                @include border-radius( 10px,
+                                10px,
+                                10px,
+                                10px);
+                                @include respond-to(mobile) {
+                                    width: 100%;
+                                }
+                            }
+                            .icon-play {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wrap-collect-toy {
+        text-align: center;
+        background: url('../images/global/vr-bg.jpg') center center no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        .wrap-heading {
+            padding: 10px 0 0;
+            .logo-vr-toy {
+                display: inline-block;
+                vertical-align: bottom;
+            }
+            .title {
+                text-indent: -9999px;
+                background: url('../images/global/title-vr-toy.png') no-repeat;
+                width: 287px;
+                height: 81px;
+                display: inline-block;
+            }
+        }
+        .wrap-list-collection {
+            margin: 0 auto;
+            /* padding-bottom: 40px; */
+            position: relative;
+            max-width: 200px;
+            @include screen( small ) {
+            	max-width: 320px;
+            }
+            @include screen( medium ) {
+            	max-width: 640px;
+            }
+            @include screen( large ) {
+            	max-width: 1050px;
+            }
+            .list-collection {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                .item {
+                    display: inline-block;
+                    img {
+                        width: 100%;
+                        max-width: 380px;
+                    }
+                }
+                .slick-arrow {
+                    &:before {
+                        display: none;
+                    }
+                    &.slick-prev {
+                        left: -65px;
+                        @include spritePos( 0,
+                        3,
+                        66px,
+                        67px);
+                        &:hover {
+                            @include spritePos( 3,
+                            3,
+                            66px,
+                            67px);
+                        }
+                    }
+                    &.slick-next {
+                        right: -64px;
+                        @include spritePos( 0,
+                        0,
+                        66px,
+                        67px);
+                        &:hover {
+                            @include spritePos( 3,
+                            0,
+                            66px,
+                            67px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.type-kid {
+        background: url("../images/bg-sky.png") repeat-x top;
+        .main-content .heading {
+            margin: 0 auto;
+            text-indent: -9999px;
+            background: url('../images/global/heading-type-kid.png') no-repeat;
+            width: 833px;
+            height: 119px;
+            display: inline-block;
+            @include respond-to(mobile) {
+                background: url('../images/global/heading-type-kid-mob.png') no-repeat;
+                max-width: 420px;
+                width: 96%;
+                margin: 0 10px;
+                height: 174px;
+                background-size: 100%;
+            }
+        }
+    }
+    &.type-parent {
+        background: url("../images/bg-sky.png") repeat-x top;
+        .main-content .heading {
+            margin: 0 auto;
+            text-indent: -9999px;
+            background: url("../images/page-parent/heading-type-parent.png") no-repeat;
+            width: 584px;
+            height: 98px;
+        }
+        .wrap-kun-product {
+            /*background: url("../images/page-parent/mount-right.png") center right no-repeat;*/
+            background: url("../images/page-parent/bg-mount.png") center center no-repeat;
+            position: relative;
+            /*&:after {
+		    	content:'';
+		    	position: absolute;
+		    	left: 0;
+		    	top: 36%;
+		    	width: 646px;
+		    	height: 234px;
+			    background: url("../images/page-parent/mount-left.png") center right no-repeat;
+		    }*/
+        }
+        .sub-block {
+            margin-top: -140px;
+            position: relative;
+            font-size: 0;
+            h3 {
+                margin: 0 auto;
+                text-indent: -9999px;
+                background: url("../images/page-parent/second-heading.png") no-repeat;
+                width: 741px;
+                height: 120px;
+            }
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 -65px;
+                z-index: 1;
+                @include respond-to(ipad) {
+                    width: 46%;
+                }
+            }
+            .milk-drop {
+                width: 34%;
+                z-index: 100;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                display: inline-block;
+                background: url("../images/page-parent/bg-milk-drop.png") no-repeat;
+                padding: 72px 75px 95px;
+                background-size: 100%;
+                font-size: 18px;
+                color: #147ec8;
+                max-width: 387px;
+                line-height: 24px;
+                @include respond-to(ipad) {
+                    padding: 72px 50px 70px;
+                    background-size: 100% 95%;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                &.milk2 {
+                    width: 30%;
+                    padding: 55px 58px 60px;
+                    max-width: 320px;
+                }
+            }
+        }
+    }
 }

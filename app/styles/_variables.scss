@@ -130,3 +130,21 @@ $grid: 30px;
 		@media only screen and (min-width: 1024px) { @content; }
 	}
 }
+
+// MEDIA QUERIES
+$breakpoints: (
+	small: 480px,
+	medium: 768px,
+	large: 1280px
+);
+
+@mixin screen($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    }
+    @else {
+        @content;
+    }
+}
