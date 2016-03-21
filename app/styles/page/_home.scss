@@ -105,8 +105,13 @@
                             .thumbnail img {
                                 width: 100%;
                             }
+                            .icon-play {
+                                top: 43%;
+                                left: 48%;
+                            }
                         }
                         .thumbnail {
+                            position: relative;
                             @include respond-to(mobile) {
                                 margin: 10px 0;
                             }
@@ -122,7 +127,13 @@
                                     width: 100%;
                                 }
                             }
-                            .icon-play {}
+                            .icon-play {
+                                position: absolute;
+                                top: 38%;
+                                display: block;
+                                left: 43%;
+                                max-width: 40px;
+                            }
                         }
                     }
                 }
@@ -150,7 +161,7 @@
         }
         .wrap-list-collection {
             margin: 0 auto;
-            /* padding-bottom: 40px; */
+            padding-bottom: 40px; 
             position: relative;
             max-width: 200px;
             @include screen( small ) {
