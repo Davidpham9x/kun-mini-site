@@ -133,6 +133,10 @@
                                 display: block;
                                 left: 43%;
                                 max-width: 40px;
+                                @include respond-to(mobile){
+                                    top: 40%;
+                                    left: 47%;
+                                }
                             }
                         }
                     }
@@ -220,6 +224,9 @@
     }
     &.type-kid {
         background: url("../images/bg-sky.png") repeat-x top;
+        @include respond-to(mobile){
+            background: none;
+        }
         .main-content {
             .heading {
                 margin: 0 auto;

@@ -29,8 +29,19 @@ var isMobile = {
             this.initFormElements();
             this.initSliderCollectionVR();
             this.initPopupYT();
+            this.initMenuMobile();
         },
 
+        initMenuMobile: function() {
+            $('.btn-menu-mob').on('click',function(){
+                if (!$('.main-nav').hasClass('show')) {
+                    $('.main-nav').addClass('show').slideDown(500);
+                }
+                else{
+                    $('.main-nav').removeClass('show').slideUp(500);
+                }
+            });
+        },
         initPopupYT: function() {
             $('.click-video').on('click', function(){
                 var x = $(this).data('src');
