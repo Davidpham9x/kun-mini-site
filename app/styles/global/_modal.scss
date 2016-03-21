@@ -1,0 +1,23 @@
+.mfp-iframe-holder {
+	.mfp-close {
+		background: url('../images/btn_close.png') no-repeat;
+		max-width: 45px;
+		height: 55px;
+		background-size: 100% 100%;
+		text-indent: -9999px;
+	    top: -30px;
+	    font-size: 0;
+	    right: -25px;
+	}
+	iframe {
+		border: 2px solid #fff;
+	}
+	.mfp-content {
+		@include respond-to(ipad){
+			max-width: 94%;
+		}
+		@include respond-to(mobile){
+			max-width: 94%;
+		}
+	}
+}

@@ -27,9 +27,35 @@ var isMobile = {
         init: function() { //initialization code goes here
             $.support.cors = true;
             this.initFormElements();
-            // this.initSliderCollectionVR();
+            this.initSliderCollectionVR();
+            this.initPopupYT();
         },
 
+        initPopupYT: function() {
+            $('.click-video').on('click', function(){
+                var x = $(this).data('src');
+                $.magnificPopup.open({
+                  items: {
+                         src: 'http://www.youtube.com/watch?v='+ x
+                     },
+                  type: 'iframe',
+                  iframe: {
+                            markup: '<div class="mfp-iframe-scaler">'+
+                                    '<div class="mfp-close"></div>'+
+                                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                                    '</div>', 
+                        patterns: {
+                            youtube: {
+                                  index: 'youtube.com/', 
+                                  id: 'v=', 
+                                  src: '//www.youtube.com/embed/%id%?autoplay=1' 
+                                }
+                             },
+                             srcAction: 'iframe_src', 
+                     }
+                })
+            })
+        },
         initFormElements: function() {
             $('input, textarea').placeholder(); //enable placeholder support for all browsers
 
