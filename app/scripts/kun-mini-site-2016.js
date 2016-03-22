@@ -46,6 +46,9 @@ var isMobile = {
                 if($(window).width() > 676){
                     $('.main-nav').show();
                 }
+                else{
+                    $('.main-nav').hide();
+                }
             });
         },
         initPopupYT: function() {

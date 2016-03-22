@@ -58,6 +58,7 @@
         .kun-products {
             margin: 10px auto 0;
             display: block;
+            max-width: 646px;
             @include respond-to(ipad) {
                 width: 100%;
                 margin: 0 auto;
