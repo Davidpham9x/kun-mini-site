@@ -41,6 +41,12 @@ var isMobile = {
                     $('.main-nav').removeClass('show').slideUp(500);
                 }
             });
+
+            $( window ).resize(function() {
+                if($(window).width() > 676){
+                    $('.main-nav').show();
+                }
+            });
         },
         initPopupYT: function() {
             $('.click-video').on('click', function(){
