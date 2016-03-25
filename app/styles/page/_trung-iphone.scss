@@ -1,0 +1,271 @@
+.trung-iphone {
+	text-align: center;
+	color: #005045;
+	background: url("../images/bg-sky.png") repeat-x top;
+	.wrap-content {
+	    position: relative;
+	    margin: 0 auto;
+	    max-width: 1100px;
+	    padding: 0;
+	    @include respond-to(ipad){
+	    	margin: 0 20px;
+	    }
+	    @include respond-to(mobile){
+	    	margin: 0 10px;
+	    }
+	}
+	p {
+		margin: 0;
+		span {
+		color: #fc0707;
+		}
+	}
+	.block-heading {
+	    padding: 30px 0 40px;
+	    background: url("../images/page-parent/bg-mount.png") center bottom no-repeat;
+	    ::-webkit-scrollbar-track
+		{
+			background-color: #F8F8F8;
+		}
+
+		::-webkit-scrollbar
+		{
+			width: 10px;
+			background-color: #F8F8F8;
+		}
+
+		::-webkit-scrollbar-thumb
+		{
+			background-color: #00c8db;
+			@include border-radius(20px);
+		}
+	    .heading {
+			margin: 0 auto 10px;
+		    text-indent: -9999px;
+		    background: url("../images/trungiphone/heading.png") no-repeat;
+		    width: 259px;
+		    height: 52px;
+			@include respond-to(mobile){
+				margin-bottom: 20px;
+			}
+	    }
+	    p {
+		    font-size: 18px;
+		    line-height: 26px;
+		    margin: 10px 0;
+	    }
+	    .time-event {
+	    	margin-top: 90px;
+		    background: url("../images/trungiphone/bg-1.png") no-repeat center top;
+		    padding: 30px 50px;
+		    @include respond-to(mobile){
+		    	margin-top: 20px;
+		    }
+	    }
+	    .box-img {
+	    	background: #f9f9f9;
+	    	border: 2px solid #fff;
+	    	max-height: 450px;
+	    	/*overflow:hidden; */
+	    	overflow-y:auto; 
+	    	padding: 20px;
+	    	@include border-radius(10px);
+	    	@include box-shadow(0,5px,20px,#aaa);
+	    	.wrap {
+	    		p {
+	    			font-size: 15px;
+				    line-height: 20px;
+	    		}
+	    	}
+	    }
+	}
+	h3 {
+		font-size: 30px;
+		padding: 20px;
+		line-height: 42px;
+		color: #147ec8;
+		font-weight: bold;
+	}
+	.block-tracuu {
+		background: #00c8db;
+		padding: 30px 0;
+		color: #fff;
+		p.col-half {
+			text-align: left;
+		}
+		h3 {
+			color: #fff;
+			margin-top: 20px;
+		}
+		.wrap-content {
+			color: #004a3d;
+			background: #fff5eb;
+			overflow: hidden;
+			@include border-radius(10px);
+			h3 {
+				color: #147ec8;
+				display: block;
+				margin-top: 0;
+				background: #ededed;
+			}
+		}
+		.box-result{
+			.wrap-content {
+				overflow: initial;
+			    padding: 37px 0;
+				&:before {
+					content:"";
+					position: absolute;
+					background: url('../images/trungiphone/conner-left.png') no-repeat;
+					width: 145px;
+					height: 439px;
+					top: 25px;
+					left: -145px;
+				    z-index: 0;
+				    @include respond-to(ipad){
+				    	display: none;
+				    }
+				    @include respond-to(mobile){
+				    	display: none;
+				    }
+				}
+				&:after {
+					content:"";
+					position: absolute;
+					background: url('../images/trungiphone/conner-right.png') no-repeat;
+					width: 131px;
+					height: 435px;
+					top: 40px;
+				    right: -115px;
+				    z-index: 0;
+				    @include respond-to(ipad){
+				    	display: none;
+				    }
+				    @include respond-to(mobile){
+				    	display: none;
+				    }
+				}
+			}
+		}
+		.list-result {
+			padding: 20px 6%;
+			li {
+				list-style: none;
+				padding: 20px;
+			}
+			img {
+				border:2px solid #fff;
+				max-width: 100%;
+				@include box-shadow(-5px,5px,20px,#aaa);
+				@include border-radius(20px);
+			}
+			table {    
+				width: 96%;
+				font-size: 16px;
+			    margin: 0px auto;
+				th {
+					font-weight: bold;
+				    padding: 10px 20px;
+				    border: 1px solid;
+				    color: #005045;
+				}
+				.name {
+					font-weight: bold;
+				}
+				td {
+				    padding: 10px 20px;
+				    border: 1px solid;
+				    color: #333;
+				}
+			}
+			h4 {
+				font-size: 19px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			    line-height: 24px;
+				span{
+					color: #ff0000;
+				}
+			}
+		}
+		.btn-thele {
+			background: url('../images/trungiphone/btn-thele.png') no-repeat;
+			width: 241px;
+			height: 59px;
+			margin: 20px auto;
+			display: block;
+			text-indent: -9999px;
+		}
+		.input {
+			position: relative;
+		    max-width: 55%;
+		    margin: 25px auto;
+		    .col-half {
+			    font-size: 16px;
+			    vertical-align: middle;
+		    	
+		    }
+			input {
+				width: 100%;
+				height: 58px;
+				padding: 0 20px;
+				font-size: 30px;
+				color: #005045;
+				@include border-radius(30px);
+			}
+			.field {
+				position: relative;
+			}
+			.search {
+				position: absolute;
+				top: -2px;
+				right: 0;
+				width: 63px;
+				height: 63px;
+			    background: url("../images/trungiphone/search.png") no-repeat;
+			    background-size: 100% 100%;
+			}
+		}
+		.box-thanks {
+			padding: 25px 0;
+			font-size: 17px;
+			line-height: 22px;
+		    background: url("../images/trungiphone/bg-blurgray.png") no-repeat center top;
+		    span {
+		    	color: #fc0707;
+		    }
+		}
+	}
+	.block-tnc {
+	    background: url("../images/trungiphone/bg-tnc.png") no-repeat center 2px;
+		.text {
+			text-align: left;
+			padding-left: 20px;
+			p {
+				margin: 10px 0;
+			}
+		}
+	}
+}
+
+.slick-arrow {
+	&:before {
+	    display: none;
+	}
+	&.slick-prev {
+	    left: 0%;
+	    z-index: 10;
+	    @include spritePos( 0,3,66px,67px);
+	    &:hover {
+	        @include spritePos( 3,3,66px,67px);
+	    }
+	}
+	&.slick-next {
+	    z-index: 10;
+	    right: 0%;
+	    @include spritePos( 0,0,66px,67px);
+	    &:hover {
+	        @include spritePos( 3,0,66px,67px);
+	    }
+	}
+}

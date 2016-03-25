@@ -30,6 +30,7 @@ var isMobile = {
             this.initSliderCollectionVR();
             this.initPopupYT();
             this.initMenuMobile();
+            this.initSliderTrungIphone();
         },
 
         initMenuMobile: function() {
@@ -39,15 +40,6 @@ var isMobile = {
                 }
                 else{
                     $('.main-nav').removeClass('show').slideUp(500);
-                }
-            });
-
-            $( window ).resize(function() {
-                if($(window).width() > 676){
-                    $('.main-nav').show();
-                }
-                else{
-                    $('.main-nav').hide();
                 }
             });
         },
@@ -126,6 +118,36 @@ var isMobile = {
             $(document).on('change', '.select-wrapper select', function() {
                 $(this).prev('span').replaceWith('<span>' + $(this).find('option:selected').text() + '</span>');
             });
+        },
+
+        initSliderTrungIphone: function () {
+            $('#counter').countdown('2020/10/10 12:34:56')
+             .on('update.countdown', function(event) {
+               var format = '<span>%H</span>:<span>%M</span>:<span>%S</span>';
+               // if(event.offset.days > 0) {
+               //   format = '%-d day%!d ' + format;
+               // }
+               // if(event.offset.weeks > 0) {
+               //   format = '%-w week%!w ' + format;
+               // }
+               $(this).html(event.strftime(format));
+             })
+             .on('finish.countdown', function(event) {
+               $(this).html('This offer has expired!')
+                 .parent().addClass('disabled');
+             
+             });
+
+            // var liftoffTime = new Date();
+            // liftoffTime.setDate(liftoffTime.getDate() + 5); 
+
+            var divContent = $('.box-result .wrap-content');
+
+                divContent.find('.list-result').slick({
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
         },
 
         initSliderCollectionVR: function () {
