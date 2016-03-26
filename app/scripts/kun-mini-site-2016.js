@@ -121,9 +121,9 @@ var isMobile = {
         },
 
         initSliderTrungIphone: function () {
-            $('#counter').countdown('2020/10/10 12:34:56')
+            $('#counter .wrap').countdown('2020/10/10 12:34:56')
              .on('update.countdown', function(event) {
-               var format = '<span>%H</span>:<span>%M</span>:<span>%S</span>';
+               var format = '<span>%H</span><span>%M</span><span>%S</span>';
                // if(event.offset.days > 0) {
                //   format = '%-d day%!d ' + format;
                // }

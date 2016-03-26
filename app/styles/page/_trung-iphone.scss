@@ -10,9 +10,9 @@
 	    @include respond-to(ipad){
 	    	margin: 0 20px;
 	    }
-	    @include respond-to(mobile){
+	    /*@include respond-to(mobile){
 	    	margin: 0 10px;
-	    }
+	    }*/
 	}
 	p {
 		margin: 0;
@@ -20,11 +20,17 @@
 		color: #fc0707;
 		}
 	}
+	.col-half {
+		@include respond-to(mobile){
+			padding: 0 10px;
+		}
+	}
 	.block-heading {
 	    padding: 30px 0 40px;
 	    background: url("../images/page-parent/bg-mount.png") center bottom no-repeat;
 	    ::-webkit-scrollbar-track
 		{
+			margin:5px;
 			background-color: #F8F8F8;
 		}
 
@@ -38,6 +44,104 @@
 		{
 			background-color: #00c8db;
 			@include border-radius(20px);
+		}
+	    .time-event {
+	    	margin-top: 105px;
+	    	padding-right: 3%;
+		    @include respond-to(mobile){
+		    	padding: 0;
+		    	margin-top: 0;
+		    }
+
+		    .box {
+			    background: url("../images/trungiphone/bg-1.png") no-repeat center top;
+			    padding: 25px 50px;
+			    background-size: 100% 100%;
+			    @include respond-to(ipad){
+				    background: url("../images/trungiphone/bg-1-mob.png") no-repeat center top;
+				    background-size: 100% 100%;
+			    	margin-top: 20px;
+			    	padding: 15px 10px;
+			    	max-width: 350px;
+			    	margin: 0 auto;
+			    }
+			    @include respond-to(mobile){
+				    background: url("../images/trungiphone/bg-1-mob.png") no-repeat center top;
+				    background-size: 100% 100%;
+			    	margin-top: 20px;
+			    	padding: 15px 10px;
+			    	max-width: 350px;
+			    	margin: 0 auto;
+			    }
+		    }
+	    }
+		#counter {
+			max-width: 260px;
+			margin: 0 auto;
+			position: relative;
+			@include respond-to(ipad){
+				max-width: 168px;
+				margin: 0 auto 10px;
+			}
+			@include respond-to(mobile){
+				max-width: 168px;
+				margin: 0 auto 10px;
+			}
+			span {
+				width: 33.33%;
+				display: inline-block;
+				vertical-align: top;
+				font-size: 22px;
+				margin-bottom:8px; 
+			    @include respond-to(ipad){
+			    	font-size: 16px;
+					margin-bottom:5px; 
+			    }
+			    @include respond-to(mobile){
+			    	font-size: 16px;
+					margin-bottom:5px; 
+			    }
+			}
+			.ab {
+				position: absolute;
+				top: 60px;
+				left: -50px;
+				width: auto;
+			    @include respond-to(ipad){
+				    top: 38px;
+				    left: -31px;
+			    }
+			    @include respond-to(mobile){
+				    top: 38px;
+				    left: -31px;
+			    }
+			}
+			.wrap {
+				span {
+					background: url('../images/trungiphone/bg-number.png') no-repeat;
+					width: 85px;
+					height: 76px;
+					color: #ff0000;
+					background-size: 100%;
+					font-weight: bold;
+					font-size: 44px;
+					padding-top: 25px;
+				    @include respond-to(ipad){
+				    	width: 55px;
+				    	height: 45px;
+				    	padding-top: 14px;
+				    	font-size: 22px;
+				    	margin-bottom: 0;
+				    }
+				    @include respond-to(mobile){
+				    	width: 55px;
+				    	height: 45px;
+				    	padding-top: 14px;
+				    	font-size: 22px;
+				    	margin-bottom: 0;
+				    }
+				}
+			}
 		}
 	    .heading {
 			margin: 0 auto 10px;
@@ -53,19 +157,22 @@
 		    font-size: 18px;
 		    line-height: 26px;
 		    margin: 10px 0;
-	    }
-	    .time-event {
-	    	margin-top: 90px;
-		    background: url("../images/trungiphone/bg-1.png") no-repeat center top;
-		    padding: 30px 50px;
-		    @include respond-to(mobile){
-		    	margin-top: 20px;
-		    }
+			@include respond-to(ipad){
+			    font-size: 12px;
+			    line-height: 18px;
+			    margin: 5px 0;
+			}
+			@include respond-to(mobile){
+			    font-size: 12px;
+			    line-height: 18px;
+			    margin: 5px 0;
+			}
 	    }
 	    .box-img {
 	    	background: #f9f9f9;
 	    	border: 2px solid #fff;
 	    	max-height: 450px;
+	    	margin-top: 10px;
 	    	/*overflow:hidden; */
 	    	overflow-y:auto; 
 	    	padding: 20px;
@@ -85,11 +192,19 @@
 		line-height: 42px;
 		color: #147ec8;
 		font-weight: bold;
+		@include respond-to(mobile){
+		    font-size: 22px;
+		    line-height: 26px;
+		    padding: 10px;
+		}
 	}
 	.block-tracuu {
 		background: #00c8db;
 		padding: 30px 0;
 		color: #fff;
+		@include respond-to(mobile){
+			padding: 20px 10px;
+		}
 		p.col-half {
 			text-align: left;
 		}
@@ -113,6 +228,12 @@
 			.wrap-content {
 				overflow: initial;
 			    padding: 37px 0;
+			    @include respond-to(ipad){
+			    	padding: 10px 0;
+			    }
+			    @include respond-to(mobile){
+			    	padding: 0;
+			    }
 				&:before {
 					content:"";
 					position: absolute;
@@ -148,12 +269,17 @@
 			}
 		}
 		.list-result {
-			padding: 20px 6%;
+			padding: 20px 2%;
 			li {
+				text-align: center;
 				list-style: none;
-				padding: 20px;
+			    padding: 20px 40px;
+			    @include respond-to(mobile){
+			    	padding: 0;
+			    }
 			}
 			img {
+				display: inline-block;
 				border:2px solid #fff;
 				max-width: 100%;
 				@include box-shadow(-5px,5px,20px,#aaa);
@@ -163,6 +289,9 @@
 				width: 96%;
 				font-size: 16px;
 			    margin: 0px auto;
+			    @include respond-to(mobile){
+			    	font-size: 14px;
+			    }
 				th {
 					font-weight: bold;
 				    padding: 10px 20px;
@@ -183,6 +312,9 @@
 				font-weight: bold;
 				margin-bottom: 20px;
 			    line-height: 24px;
+			    @include respond-to(mobile){
+			    	font-size: 16px;
+			    }
 				span{
 					color: #ff0000;
 				}
@@ -200,9 +332,18 @@
 			position: relative;
 		    max-width: 55%;
 		    margin: 25px auto;
+		    @include respond-to(ipad){
+		    	max-width: 85%;
+		    }
+		    @include respond-to(mobile){
+		    	max-width: 90%;
+		    }
 		    .col-half {
 			    font-size: 16px;
 			    vertical-align: middle;
+			    @include respond-to(mobile){
+			    	font-size: 13px;
+			    }
 		    	
 		    }
 			input {
@@ -211,7 +352,12 @@
 				padding: 0 20px;
 				font-size: 30px;
 				color: #005045;
+				font-weight: lighter;
 				@include border-radius(30px);
+				@include respond-to(mobile){
+					height: 40px;
+					font-size: 22px;
+				}
 			}
 			.field {
 				position: relative;
@@ -224,6 +370,10 @@
 				height: 63px;
 			    background: url("../images/trungiphone/search.png") no-repeat;
 			    background-size: 100% 100%;
+				@include respond-to(mobile){
+					width: 42px;
+					height: 42px;
+				}
 			}
 		}
 		.box-thanks {
@@ -231,6 +381,10 @@
 			font-size: 17px;
 			line-height: 22px;
 		    background: url("../images/trungiphone/bg-blurgray.png") no-repeat center top;
+		    @include respond-to(mobile){
+		    	font-size: 12px;
+		    	padding: 10px 10px;
+		    }
 		    span {
 		    	color: #fc0707;
 		    }
@@ -256,6 +410,9 @@
 	    left: 0%;
 	    z-index: 10;
 	    @include spritePos( 0,3,66px,67px);
+	    @include respond-to(mobile){
+	    	top: 36%;
+	    }
 	    &:hover {
 	        @include spritePos( 3,3,66px,67px);
 	    }
@@ -263,6 +420,9 @@
 	&.slick-next {
 	    z-index: 10;
 	    right: 0%;
+	    @include respond-to(mobile){
+	    	top: 36%;
+	    }
 	    @include spritePos( 0,0,66px,67px);
 	    &:hover {
 	        @include spritePos( 3,0,66px,67px);

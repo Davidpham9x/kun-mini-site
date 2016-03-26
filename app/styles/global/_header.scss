@@ -32,6 +32,9 @@ header {
 				text-transform: uppercase;
 				display: inline-block;
 				@include border-radius( 19px, 19px, 19px, 19px );
+				@include respond-to(ipad){
+					font-size: 14px;
+				}
 				@include respond-to(mobile){
 					display:block;
 					line-height: 20px;
