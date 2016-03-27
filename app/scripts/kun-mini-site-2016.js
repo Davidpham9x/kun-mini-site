@@ -31,10 +31,11 @@ var isMobile = {
             this.initPopupYT();
             this.initMenuMobile();
             this.initSliderTrungIphone();
+            this.initPopupListLive();
         },
 
         initMenuMobile: function() {
-            $('.btn-menu-mob').on('click',function(){
+            $('.btn-menu-mob').on('click', function(){
                 if (!$('.main-nav').hasClass('show')) {
                     $('.main-nav').addClass('show').slideDown(500);
                 }
@@ -43,35 +44,45 @@ var isMobile = {
                 }
             });
         },
+        initPopupListLive: function() {
+            $('.box-img img').on('click', function(){
+                // alert('s')
+                $.magnificPopup.open({
+                  items: {
+                        src: '#popup-live'
+                    },
+                    type: 'inline'
+                });
+            });
+        },
         initPopupYT: function() {
             $('.click-video').on('click', function(){
                 var x = $(this).data('src');
                 $.magnificPopup.open({
                   items: {
-                         src: 'http://www.youtube.com/watch?v='+ x
-                     },
-                  type: 'iframe',
-                  iframe: {
-                            markup: '<div class="mfp-iframe-scaler">'+
-                                    '<div class="mfp-close"></div>'+
-                                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-                                    '</div>',
+                        src: 'http://www.youtube.com/watch?v='+ x
+                    },
+                    type: 'iframe',
+                    iframe: {
+                        markup: '<div class="mfp-iframe-scaler">'+
+                                '<div class="mfp-close"></div>'+
+                                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                                '</div>',
                         patterns: {
                             youtube: {
-                                  index: 'youtube.com/',
-                                  id: 'v=',
-                                  src: '//www.youtube.com/embed/%id%?autoplay=1'
+                                    index: 'youtube.com/',
+                                    id: 'v=',
+                                    src: '//www.youtube.com/embed/%id%?autoplay=1'
                                 }
-                             },
-                             srcAction: 'iframe_src',
-                     }
-                })
-            })
+                            },
+                            srcAction: 'iframe_src',
+                    }
+                });
+            });
         },
         initFormElements: function() {
-            $('input, textarea').placeholder(); //enable placeholder support for all browsers
+            $('input, textarea').placeholder(); 
 
-            //Radio Wrapper
             $(".radio-wrapper .input-radio").each(function() {
                 if ($(this).is(":checked")) {
                     $('.input-radio[name="' + $(this).attr('name') + '"]').parents(".radio-selected").removeClass("radio-selected");
@@ -122,24 +133,16 @@ var isMobile = {
 
         initSliderTrungIphone: function () {
             $('#counter .wrap').countdown('2020/10/10 12:34:56')
-             .on('update.countdown', function(event) {
-               var format = '<span>%H</span><span>%M</span><span>%S</span>';
-               // if(event.offset.days > 0) {
-               //   format = '%-d day%!d ' + format;
-               // }
-               // if(event.offset.weeks > 0) {
-               //   format = '%-w week%!w ' + format;
-               // }
-               $(this).html(event.strftime(format));
-             })
-             .on('finish.countdown', function(event) {
-               $(this).html('This offer has expired!')
-                 .parent().addClass('disabled');
+                .on('update.countdown', function(event) {
+                    var format = '<span>%H</span><span>%M</span><span>%S</span>';
+                    $(this).html(event.strftime(format));
+                })
+                .on('finish.countdown', function(event) {
+                    $(this).html('This offer has expired!')
+                    .parent().addClass('disabled');
              
              });
 
-            // var liftoffTime = new Date();
-            // liftoffTime.setDate(liftoffTime.getDate() + 5); 
 
             var divContent = $('.box-result .wrap-content');
 
@@ -187,6 +190,6 @@ var isMobile = {
     };
 })(jQuery);
 
-$(document).ready(function($) {
+$(document).ready(function() {
     kunMini2016.Global.init();
 });
