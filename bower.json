@@ -7,7 +7,8 @@
     "slick-carousel": "^1.5.9",
     "normalize-css": "^3.0.3",
     "jquery-placeholder": "^2.3.1",
-    "magnific-popup": "^1.1.0"
+    "magnific-popup": "^1.1.0",
+    "jquery.countdown": "^2.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

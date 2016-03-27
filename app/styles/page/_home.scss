@@ -58,12 +58,12 @@
         .kun-products {
             margin: 10px auto 0;
             display: block;
-            max-width: 646px;
             @include respond-to(ipad) {
                 width: 100%;
                 margin: 0 auto;
             }
             @include respond-to(mobile) {
+                max-width: 646px;
                 width: 100%;
             }
         }
@@ -195,28 +195,16 @@
                     }
                     &.slick-prev {
                         left: -65px;
-                        @include spritePos( 0,
-                        3,
-                        66px,
-                        67px);
+                        @include spritePos( 0,3,66px,67px);
                         &:hover {
-                            @include spritePos( 3,
-                            3,
-                            66px,
-                            67px);
+                            @include spritePos( 3,3,66px,67px);
                         }
                     }
                     &.slick-next {
                         right: -64px;
-                        @include spritePos( 0,
-                        0,
-                        66px,
-                        67px);
+                        @include spritePos( 0,0,66px,67px);
                         &:hover {
-                            @include spritePos( 3,
-                            0,
-                            66px,
-                            67px);
+                            @include spritePos( 3,0,66px,67px);
                         }
                     }
                 }
