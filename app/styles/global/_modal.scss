@@ -13,6 +13,11 @@
 		border: 2px solid #fff;
 	}
 }
+.mfp-container {
+	@include respond-to(mobile) {
+	    padding: 0 23px;
+	}
+}
 .mfp-inline-holder{
 
 	::-webkit-scrollbar-track
@@ -43,6 +48,10 @@
 			text-indent: -999999px;
 			min-height:85px;
 			@include border-radius(10px,10px,0,0);
+			@include respond-to(mobile){
+				background-size: 92%;
+			}
+
 		}
 		h3 {
 			background: url('../images/trungiphone/week-title.png') no-repeat center;

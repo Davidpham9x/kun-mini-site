@@ -227,6 +227,9 @@
                 }
                 @include respond-to(mobile) {
                     padding: 0;
+                    .slick-arrow  {
+                        display: none !important;
+                    }
                 }
                 &:before {
                     content: "";
@@ -287,15 +290,16 @@
                 }
                 th {
                     font-weight: bold;
-                    padding: 10px 20px;
+                    padding: 20px;
                     border: 1px solid;
                     color: #005045;
+                    text-transform: uppercase;
                 }
                 .name {
                     font-weight: bold;
                 }
                 td {
-                    padding: 10px 20px;
+                    padding: 20px;
                     border: 1px solid;
                     color: #333;
                 }

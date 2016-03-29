@@ -196,6 +196,9 @@
                     &.slick-prev {
                         left: -65px;
                         @include spritePos( 0,3,66px,67px);
+                        @include respond-to(mobile) {
+                            top: 54%;
+                        }
                         &:hover {
                             @include spritePos( 3,3,66px,67px);
                         }
@@ -203,6 +206,9 @@
                     &.slick-next {
                         right: -64px;
                         @include spritePos( 0,0,66px,67px);
+                        @include respond-to(mobile) {
+                            top: 54%;
+                        }
                         &:hover {
                             @include spritePos( 3,0,66px,67px);
                         }
