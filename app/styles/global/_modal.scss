@@ -14,6 +14,9 @@
 	}
 }
 .mfp-container {
+	@include respond-to(ipad) {
+	    padding: 0 23px;
+	}
 	@include respond-to(mobile) {
 	    padding: 0 23px;
 	}

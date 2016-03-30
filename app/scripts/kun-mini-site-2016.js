@@ -146,13 +146,35 @@ var isMobile = {
 
                 });
 
-
             var divContent = $('.box-result .wrap-content');
 
             divContent.find('.list-result').slick({
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1
+            });
+
+            var divVideo = $('.wrap-slide-video');
+
+            divVideo.find('.slide-video').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    }, {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             });
         },
 
