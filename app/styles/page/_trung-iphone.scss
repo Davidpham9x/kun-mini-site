@@ -10,6 +10,86 @@
         @include respond-to(ipad) {
             margin: 0 20px;
         }
+        &.stream-live2{
+            h3 {
+                padding-top: 10px;
+                background: url('../images/trungiphone/title-slide.png') no-repeat center;
+                min-height: 43px;
+                text-indent: -9999px;
+                @include respond-to(mobile) {
+                    max-width: 388px;
+                    margin: 0 auto;
+                    padding: 0;
+                    background-size: 100%;
+                }
+            }
+            .time-event {
+                max-width: 515px;
+                margin: 0 auto;
+                position: relative;
+
+                .text {
+                    position: absolute;
+                    font-size: 21px;
+                    max-width: 300px;
+                    top: 33%;
+                    right: -47%;
+                    @include respond-to(ipad){
+                        max-width: 240px;
+                        font-size: 16px;
+                        right: -24%;
+                    }
+                    @include respond-to(mobile){
+                        position: static;
+                        font-size: 18px;
+                        line-height: 21px;
+                        margin: 15px auto 0;
+                    }
+                }
+            }
+            .video-live {
+                background: rgba(255, 255, 255, 0.42);
+                border: 3px solid #fff;
+                padding: 0 40px 15px;
+                margin-top: 20px;
+                @include border-radius(10px);
+                @include respond-to(mobile){
+                    padding: 0 10px 15px;
+                    margin: 10px;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+                .slide-video {
+                    .item{
+                        padding: 0 10px;
+                    }
+                    .thumbnail {
+                        border: 3px solid #fff;
+                        @include border-radius(10px);
+
+                    }
+                }
+                .slick-arrow {
+                    top: 42%;
+                    @include respond-to(mobile){
+                        top: 46%;
+                    }
+                }
+                .slick-next {
+                    right: -6%;
+                    @include respond-to(ipad){
+                        right: -7%;
+                    }
+                }
+                .slick-prev {
+                    left: -6%;
+                    @include respond-to(ipad){
+                        left: -7%;
+                    }
+                }
+            }
+        }
     }
     p {
         margin: 0;
@@ -24,7 +104,10 @@
     }
     .block-heading {
         padding: 30px 0 40px;
-        background: url("../images/page-parent/bg-mount.png") center bottom no-repeat;
+        background: url("../images/page-parent/bg-mount.png") center 340px no-repeat;
+        @include respond-to(mobile) {
+            padding: 30px 0 10px;
+        }
         ::-webkit-scrollbar-track {
             margin: 5px;
             background-color: #F8F8F8;
