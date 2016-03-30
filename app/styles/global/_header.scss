@@ -11,6 +11,10 @@ header {
 		text-align: center;
 		padding-top: 20px;
 		position: relative;
+		background: transparent;
+		border: 0;
+		height: auto;
+		z-index: 998;
 		/* @include ab( 20px, 50%, n, n ); */
 
 		.main-nav {
