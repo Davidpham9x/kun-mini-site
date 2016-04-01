@@ -33,6 +33,8 @@ var isMobile = {
             this.initSliderTrungIphone();
             this.initPopupListLive();
             this.initShowHideTnc();
+            this.initPopupImg();
+            /*this.initModalNotice('Xong rồi nhaz');*/
         },
 
         initMenuMobile: function() {
@@ -66,7 +68,7 @@ var isMobile = {
                     },
                     type: 'iframe',
                     iframe: {
-                        markup: '<div class="mfp-iframe-scaler">' +
+                        markup: '<div class="mfp-iframe-scaler" id="iframe-yt">' +
                             '<div class="mfp-close"></div>' +
                             '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
                             '</div>',
@@ -80,6 +82,58 @@ var isMobile = {
                         srcAction: 'iframe_src',
                     }
                 });
+            });
+        },
+
+        initPopupImg: function() {
+            $('.image-link').off('click').on('click', function(e) {
+                e.preventDefault();
+                var _this = $(this)
+                var contentInfo = $('<div class="wrap">'+
+                    '<img src="" />'+
+                    '<p>Người may mắn trúng giải <b>thứ 1</b></p>'+
+                '</div>');
+                var tempContent = null;
+
+                $(_this.attr('data-src-img').split(',')).each(function (idx, elm) {
+                    tempContent = contentInfo.clone();
+                    tempContent.appendTo( $('#popup-last-events').find('#mCSB_4_container') );
+                    tempContent.find('img').attr('src', elm);
+                    tempContent.find('p').html( _this.attr('data-title-img').split(',')[idx] );
+                });
+
+                $('#popup-last-events').find('h3').removeClass().addClass('week-'+$(this).attr('data-week'));
+                $.magnificPopup.open({
+                    items: {
+                        src: '#popup-last-events'
+                    },
+                    type: 'inline',
+                    mainClass: 'popup-last-events'
+                });
+            });
+            /*$('.image-link').magnificPopup({
+                type: 'image',
+                callbacks: {
+                    elementParse: function(item) {
+                        // Function will fire for each target element
+                        // "item.el" is a target DOM element (if present)
+                        // "item.src" is a source that you may modify
+
+                        console.log(item); // Do whatever you want with "item" object
+                    }
+                }
+            });*/
+        },
+
+        initModalNotice: function( mess ) {
+            $('#modal-notice').find('.box-mess').html( mess );
+
+            $.magnificPopup.open({
+                items: {
+                    src: '#modal-notice'
+                },
+                type: 'inline',
+                mainClass: 'modal-notice'
             });
         },
 
@@ -135,9 +189,9 @@ var isMobile = {
         },
 
         initSliderTrungIphone: function() {
-            $('#counter .wrap').countdown('2020/10/10 12:34:56')
+            $('#counter .wrap').countdown($('#counter').attr('data-counter-time'))
                 .on('update.countdown', function(event) {
-                    var format = '<span>%H</span><span>%M</span><span>%S</span>';
+                    var format = '<span>%D</span><span>%H</span><span>%M</span>';
                     $(this).html(event.strftime(format));
                 })
                 .on('finish.countdown', function(event) {
@@ -160,21 +214,19 @@ var isMobile = {
                 infinite: true,
                 slidesToShow: 4,
                 slidesToScroll: 1,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1
-                        }
-                    }, {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
                     }
-                ]
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
             });
         },
 
@@ -212,16 +264,20 @@ var isMobile = {
             });
         },
 
-        initShowHideTnc: function () {
+        initShowHideTnc: function() {
             var aTag = $('.btn-thele'),
                 divContent = $('.block-tnc');
             aTag.off('click').on('click', function(e) {
                 e.preventDefault();
-                if ( aTag.hasClass('active') ) {
-                    divContent.slideUp('normal');
+                if (aTag.hasClass('active')) {
+                    divContent.slideUp('normal', function() {
+
+                    });
                     aTag.removeClass('active');
                 } else {
-                    divContent.slideDown('normal');
+                    divContent.slideDown('normal', function() {
+                        $("html, body").animate({ scrollTop: aTag.offset().top });
+                    });
                     aTag.addClass('active');
                 }
             });

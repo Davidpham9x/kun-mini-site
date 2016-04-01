@@ -10,7 +10,7 @@
         @include respond-to(ipad) {
             margin: 0 20px;
         }
-        &.stream-live2{
+        &.stream-live2 {
             h3 {
                 padding-top: 10px;
                 background: url('../images/trungiphone/title-slide.png') no-repeat center;
@@ -27,19 +27,18 @@
                 max-width: 515px;
                 margin: 0 auto;
                 position: relative;
-
                 .text {
                     position: absolute;
                     font-size: 21px;
                     max-width: 300px;
                     top: 33%;
                     right: -47%;
-                    @include respond-to(ipad){
+                    @include respond-to(ipad) {
                         max-width: 240px;
                         font-size: 16px;
                         right: -24%;
                     }
-                    @include respond-to(mobile){
+                    @include respond-to(mobile) {
                         position: static;
                         font-size: 18px;
                         line-height: 21px;
@@ -53,7 +52,7 @@
                 padding: 0 40px 15px;
                 margin-top: 20px;
                 @include border-radius(10px);
-                @include respond-to(mobile){
+                @include respond-to(mobile) {
                     padding: 0 10px 15px;
                     margin: 10px;
                     p {
@@ -61,30 +60,29 @@
                     }
                 }
                 .slide-video {
-                    .item{
+                    .item {
                         padding: 0 10px;
                     }
                     .thumbnail {
                         border: 3px solid #fff;
                         @include border-radius(10px);
-
                     }
                 }
                 .slick-arrow {
                     top: 42%;
-                    @include respond-to(mobile){
+                    @include respond-to(mobile) {
                         top: 46%;
                     }
                 }
                 .slick-next {
                     right: -6%;
-                    @include respond-to(ipad){
+                    @include respond-to(ipad) {
                         right: -7%;
                     }
                 }
                 .slick-prev {
                     left: -6%;
-                    @include respond-to(ipad){
+                    @include respond-to(ipad) {
                         left: -7%;
                     }
                 }
@@ -108,7 +106,7 @@
         @include respond-to(mobile) {
             padding: 30px 0 10px;
         }
-        ::-webkit-scrollbar-track {
+        /* ::-webkit-scrollbar-track {
             margin: 5px;
             background-color: #F8F8F8;
         }
@@ -119,7 +117,7 @@
         ::-webkit-scrollbar-thumb {
             background-color: #00c8db;
             @include border-radius(20px);
-        }
+        } */
         .time-event {
             margin-top: 105px;
             padding-right: 3%;
@@ -245,10 +243,8 @@
         .box-img {
             background: #f9f9f9;
             border: 2px solid #fff;
-            max-height: 450px;
+            height: 450px;
             margin-top: 10px;
-            /*overflow:hidden; */
-            overflow-y: auto;
             padding: 20px;
             @include border-radius(10px);
             @include box-shadow(0,
@@ -310,7 +306,7 @@
                 }
                 @include respond-to(mobile) {
                     padding: 0;
-                    .slick-arrow  {
+                    .slick-arrow {
                         display: none !important;
                     }
                 }
@@ -324,7 +320,7 @@
                     left: -145px;
                     z-index: 0;
                     display: none;
-                    @include screen( large ) {
+                    @include screen( large) {
                         display: block;
                     }
                 }
@@ -338,7 +334,7 @@
                     right: -115px;
                     z-index: 0;
                     display: none;
-                    @include screen( large ) {
+                    @include screen( large) {
                         display: block;
                     }
                 }
@@ -472,9 +468,11 @@
     .block-tnc {
         background: url("../images/trungiphone/bg-tnc.png") no-repeat center 2px;
         display: none;
-
         .col-half {
-            height: 450px;
+            height: auto;
+            @include screen( medium) {
+                height: 450px;
+            }
         }
         .text {
             text-align: left;
@@ -484,24 +482,21 @@
             }
         }
         table {
-        	width: 100%;
-
-        	tr {
-
-        	}
-        	td, th {
-    		    border: 1px solid #005045;
-    		    text-align: center;
-    		    line-height: 1.3em;
-    			padding: 10px;
-        	}
+            width: 100%;
+            tr {}
+            td,
+            th {
+                border: 1px solid #005045;
+                text-align: center;
+                line-height: 1.3em;
+                padding: 10px;
+            }
         }
     }
-
     .wrap-download-app {
-    	@include screen( medium ) {
-    		margin: 0 auto;
-    	}
+        @include screen( medium) {
+            margin: 0 auto;
+        }
     }
 }
 
@@ -543,4 +538,30 @@
             67px);
         }
     }
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 15px;
+    height: 70px!important;
+    z-index: 1;
+    background-color: #00c8db!important;
+    @include border-radius( 15px,
+    15px,
+    15px,
+    15px);
+}
+
+.mCSB_scrollTools .mCSB_dragger {
+    height: 70px!important;
+    width: 15px;
+    z-index: 1;
+    background-color: #00c8db!important;
+    @include border-radius( 15px,
+    15px,
+    15px,
+    15px);
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+    display: none;
 }

@@ -42,7 +42,7 @@
                 <div class="wrap-content stream-live2">
                     <div class="time-event">
                         <div class="box">
-                            <div id="counter">
+                            <div id="counter" data-counter-time="2016/10/10 12:34:56">
                                 <span class="ab">Còn</span>
                                 <div class="label"><span>ngày</span><span>giờ</span><span>phút</span></div>
                                 <div class="wrap"></div>
@@ -93,10 +93,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="wrap-content wrap-col stream-live1">
+                <div class="wrap-content wrap-col stream-live1">
                     <div class="col-half time-event">
                         <div class="box">
-                            <div id="counter">
+                            <div id="counter" data-counter-time="2016/10/10 12:34:56">
                                 <span class="ab">Còn</span>
                                 <div class="label"><span>ngày</span><span>giờ</span><span>phút</span></div>
                                 <div class="wrap"></div>
@@ -111,7 +111,7 @@
                     </div>
                     <div class="col-half">
                         <img src="images/trungiphone/text-live.png" />
-                        <div class="box-img">
+                        <div class="box-img mCustomScrollbar">
                             <div class="wrap">
                                 <img src="images/trungiphone/img_1.jpg" />
                                 <p>Người may mắn trúng giải thứ 1</p>
@@ -122,7 +122,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
 
@@ -151,7 +151,9 @@
                             <div class="wrap-col">
                                 <div class="col-half">
                                     <h4>Hình ảnh buổi quay số trúng thưởng: <span>TUẦN 2</span></h4>
-                                    <img src="images/trungiphone/img_2.jpg" />
+                                    <a href="javascript:void(0)" data-src-img="images/trungiphone/img_2.jpg, images/trungiphone/img_2.jpg, images/trungiphone/img_2.jpg" data-title-img="Người may mắn trúng giải <b>thứ 1</b>, Người may mắn trúng giải <b>thứ 2</b>, Người may mắn trúng giải <b>thứ 3</b>" data-week="1" title="" class="image-link">
+                                        <img src="images/trungiphone/img_2.jpg" />
+                                    </a>
                                 </div>
                                 <div class="col-half">
                                     <h4>DANH SÁCH TRÚNG IPHONE 6S <span>TUẦN 2</span></h4>
@@ -180,7 +182,9 @@
                             <div class="wrap-col">
                                 <div class="col-half">
                                     <h4>Hình ảnh buổi quay số trúng thưởng: <span>TUẦN 2</span></h4>
-                                    <img src="images/trungiphone/img_2.jpg" />
+                                    <a href="javascript:void(0)" data-src-img="images/trungiphone/img_2.jpg, images/trungiphone/img_2.jpg, images/trungiphone/img_2.jpg" data-title-img="Người may mắn trúng giải <b>thứ 1</b>, Người may mắn trúng giải <b>thứ 2</b>, Người may mắn trúng giải <b>thứ 3</b>" data-week="2" title="" class="image-link">
+                                        <img src="images/trungiphone/img_2.jpg" />
+                                    </a>
                                 </div>
                                 <div class="col-half">
                                     <h4>DANH SÁCH TRÚNG IPHONE 6S <span>TUẦN 2</span></h4>
@@ -209,7 +213,9 @@
                             <div class="wrap-col">
                                 <div class="col-half">
                                     <h4>Hình ảnh buổi quay số trúng thưởng: <span>TUẦN 2</span></h4>
-                                    <img src="images/trungiphone/img_2.jpg" />
+                                    <a href="javascript:void(0)" data-src-img="images/trungiphone/img_2.jpg, images/trungiphone/img_2.jpg, images/trungiphone/img_2.jpg" data-title-img="Người may mắn trúng giải <b>thứ 1</b>, Người may mắn trúng giải <b>thứ 2</b>, Người may mắn trúng giải <b>thứ 3</b>" data-week="3" title="" class="image-link">
+                                        <img src="images/trungiphone/img_2.jpg" />
+                                    </a>
                                 </div>
                                 <div class="col-half">
                                     <h4>DANH SÁCH TRÚNG IPHONE 6S <span>TUẦN 2</span></h4>
@@ -362,16 +368,31 @@
     <div id="popup-live" class="mfp-hide">
         <div class="content">
             <h2>tường thuật “bốc thăm trúng iphone”</h2>
-            <h3>tuần 1</h3>
-            <div class="box-img">
+            <h3 class="week-1">tuần 1</h3>
+            <div class="box-img mCustomScrollbar">
                 <div class="wrap">
                     <img src="images/trungiphone/img_3.jpg" />
                     <p>Người may mắn trúng giải <b>thứ 1</b></p>
                 </div>
                 <div class="wrap">
                     <img src="images/trungiphone/img_3.jpg" />
-                    <p>Người may mắn trúng giải <b>thứ 1</b></p>
+                    <p>Người may mắn trúng giải <b>thứ 2</b></p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-last-events" class="mfp-hide">
+        <div class="content">
+            <div class="wrap-title">
+                <h2>Xem kết quả bốc thăm của những tuần trước</h2>
+            </div>
+            <h3 class="week-1">tuần 1</h3>
+            <div class="box-img mCustomScrollbar">
+                <!-- <div class="wrap">
+                    <img src="images/trungiphone/img_3.jpg" />
+                    <p>Người may mắn trúng giải <b>thứ 1</b></p>
+                </div> -->
             </div>
         </div>
     </div>
