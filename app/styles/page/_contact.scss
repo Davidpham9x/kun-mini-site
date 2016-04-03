@@ -134,6 +134,8 @@
 	display: inline-block;
 	text-indent: -9999px;
 	font-size: 0;
+	background: none;
+	border: 0;
     @include spritePos( 18, 3, 151px, 49px );
 }
 .wrap-col {

@@ -21,9 +21,8 @@
 	    padding: 0 23px;
 	}
 }
-.mfp-inline-holder{
-
-	::-webkit-scrollbar-track
+.mfp-inline-holder {
+	/* ::-webkit-scrollbar-track
 	{
 		margin:5px;
 		background-color: #F8F8F8;
@@ -39,7 +38,7 @@
 	{
 		background-color: #00c8db;
 		@include border-radius(20px);
-	}
+	} */
 	.mfp-content{
 		background: #fff;
 		max-width: 980px;
@@ -57,14 +56,25 @@
 
 		}
 		h3 {
-			background: url('../images/trungiphone/week-title.png') no-repeat center;
 			text-indent: -999999px;
-			min-height:85px;
+			min-height: 85px;
+			&.week-1 {
+				background: url('../images/trungiphone/week-title.png') no-repeat center;
+			}
+			&.week-2 {
+				background: url('../images/trungiphone/week-title-2.png') no-repeat center;
+			}
+			&.week-3 {
+				background: url('../images/trungiphone/week-title-3.png') no-repeat center;
+			}
+			&.week-4 {
+				background: url('../images/trungiphone/week-title-4.png') no-repeat center;
+			}
 		}
 		.box-img {
-			max-height: 535px;
-			overflow-y:auto;
-			margin: 0 10px 20px; 
+			height: 350px;
+			overflow-y: auto;
+			margin: 0 10px 20px;
 			p{
 				font-size: 21px;
 				color: #005045;
@@ -80,5 +90,48 @@
 	}
 	@include respond-to(mobile){
 		max-width: 94%;
+	}
+}
+
+
+.popup-last-events {
+	.mfp-inline-holder {
+		.mfp-content {
+			.wrap-title {
+				background-color: #ededed;
+				padding: 0 10px;
+				@include border-radius(10px, 10px, 0, 0);
+			}
+			h2 {
+				background: url("../images/trungiphone/heading-popup-1.png") center center no-repeat;
+				width: 100%;
+				max-width: 626px;
+				background-size: 100%;
+				min-height: 49px;
+				margin: 0 auto;
+			}
+		}
+	}
+	/* .mfp-inline-holder .mfp-content .box-img {
+		margin: 0;
+
+		img {
+			width: 100%;
+		}
+	}
+	.mfp-content {
+		max-width: 640px;
+	} */
+}
+
+
+.modal-notice {
+	.mfp-inline-holder {
+		.mfp-content {
+			max-width: 480px;
+			.box-mess {
+				padding: 20px;
+			}
+		}
 	}
 }
