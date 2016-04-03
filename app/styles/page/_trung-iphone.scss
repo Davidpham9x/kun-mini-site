@@ -385,6 +385,9 @@
                     padding: 20px;
                     border: 1px solid;
                     color: #333;
+                    @include respond-to(ipad) {
+                        font-size: 14px;
+                    }
                 }
             }
             h4 {
