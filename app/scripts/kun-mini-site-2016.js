@@ -54,7 +54,8 @@ var isMobile = {
                     items: {
                         src: '#popup-live'
                     },
-                    type: 'inline'
+                    type: 'inline',
+                    mainClass: 'popup-live'
                 });
             });
         },
