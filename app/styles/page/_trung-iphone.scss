@@ -270,6 +270,14 @@
             line-height: 26px;
             padding: 10px;
         }
+        &.title {
+            font-size: 24px;
+            line-height: 30px;
+
+            .red {
+                color: #ff0000;
+            }
+        }
     }
     .block-tracuu {
         background: #00c8db;

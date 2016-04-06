@@ -98,7 +98,7 @@ var isMobile = {
 
                 $(_this.attr('data-src-img').split(',')).each(function (idx, elm) {
                     tempContent = contentInfo.clone();
-                    tempContent.appendTo( $('#popup-last-events').find('#mCSB_4_container') );
+                    tempContent.appendTo( $('#popup-last-events').find('.mCSB_container') );
                     tempContent.find('img').attr('src', elm);
                     tempContent.find('p').html( _this.attr('data-title-img').split(',')[idx] );
                 });
