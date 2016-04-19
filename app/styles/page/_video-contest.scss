@@ -1,0 +1,121 @@
+.video-contest {
+    background: url("../images/bg-sky.png") repeat-x top;
+
+    .main-content {
+        text-align: center;
+
+        .heading {
+            margin: 0 auto 40px;
+            text-indent: -9999px;
+            background: url("../images/video-contest/heading.png") no-repeat;
+            width: 613px;
+            height: 100px;
+            @include respond-to(mobile) {
+                margin-bottom: 20px;
+            }
+        }
+        .wrap-video-contest-step {
+            padding: 40px 0;
+            background: url("../images/page-parent/bg-mount.png") center bottom no-repeat;
+            @include respond-to(mobile) {
+                background: url("../images/page-parent/bg-mount.png") 60px 110px no-repeat;
+            }
+
+            .wrap-content {
+                position: relative;
+                margin: 0 auto;
+                max-width: 1130px;
+                min-height: 340px;
+                @include respond-to(ipad) {
+                    min-height: 540px;
+                }
+                @include respond-to(mobile) {
+                    padding-top: 20px;
+                }
+
+	            .step {
+	            	float: left;
+	            	width: 25%;
+	            	padding: 0 10px;
+				    @include respond-to(mobile) {
+				        position: static;
+				        display: block;
+				        margin: 0 auto;
+				    }
+
+				    .desc {
+				    	color: #818181;
+				    	font-size: 15px;
+				    	text-align: left;
+
+				    	strong {
+				    		&.blue {
+				    			color: #147ec8;
+				    		}
+				    	}
+				    }
+				}
+            }
+        }
+    }
+    .video-contest-info {
+    	background-color: #0acbde;
+    	padding: 25px 0;
+
+    	h3 {
+    		background: url('../images/video-contest/heading-prize.png') no-repeat;
+    		width: 228px;
+    		height: 51px;
+    		margin: 0 auto;
+    		text-indent: -99999px;
+    	}
+    	.wrap-content {
+    		overflow: hidden;
+    		max-width: 1100px;
+    		margin: 0 auto;
+
+    		.content-prize {
+    			float: left;
+    			width: 65%;
+    		}
+    		.content-tnc {
+    			float: left;
+    			width: 35%;
+
+    			h4 {
+    				background: url('../images/video-contest/heading-tnc.png') no-repeat;
+					width: 78px;
+					height: 38px;
+					margin: 0 auto;
+					text-indent: -99999px;
+    			}
+    			.tnc-info {
+    				background: url('../images/video-contest/bg-tnc.png') no-repeat;
+					width: 318px;
+					height: 368px;
+					margin: 0 auto;
+					padding: 15px;
+					color: #147ec8;
+					font-size: 15px;
+
+    				h5 {
+    					color: #147ec8;
+    					font-size: 17px;
+						line-height: normal;
+						margin-bottom: 10px;
+    				}
+    				p {
+    					margin: 0 auto;
+    				}
+    			}
+    		}
+    	}
+    	.btn-join-now {
+    		background: url('../images/video-contest/btn-join-now.png') no-repeat;
+    		width: 205px;
+    		height: 66px;
+    		margin: 25px auto 0;
+    		text-indent: -99999px;
+    	}
+    }
+}
