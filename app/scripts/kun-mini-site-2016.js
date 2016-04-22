@@ -87,47 +87,37 @@ var isMobile = {
         },
 
         initPopupImg: function() {
-            $('.image-link').off('click').on('click', function(e) {
-                e.preventDefault();
-                var _this = $(this)
-                var contentInfo = $('<div class="wrap">'+
-                    '<img src="" />'+
-                    '<p>Người may mắn trúng giải <b>thứ 1</b></p>'+
-                '</div>');
-                var tempContent = null;
+            $('.image-link').each(function() {
+                var _this = $(this);
+                _this.off('click').on('click', function(e) {
+                    e.preventDefault();
+                    var contentInfo = $('<div class="wrap">' +
+                        '<img src="" />' +
+                        '<p>Người may mắn trúng giải <b>thứ 1</b></p>' +
+                        '</div>');
+                    var tempContent = null;
 
-                $(_this.attr('data-src-img').split(',')).each(function (idx, elm) {
-                    tempContent = contentInfo.clone();
-                    tempContent.appendTo( $('#popup-last-events').find('.mCSB_container') );
-                    tempContent.find('img').attr('src', elm);
-                    tempContent.find('p').html( _this.attr('data-title-img').split(',')[idx] );
-                });
+                    $(_this.attr('data-src-img').split(',')).each(function(idx, elm) {
+                        tempContent = contentInfo.clone();
+                        tempContent.appendTo($('#popup-last-events').find('.mCSB_container'));
+                        tempContent.find('img').attr('src', elm);
+                        tempContent.find('p').html(_this.attr('data-title-img').split(',')[idx]);
+                    });
 
-                $('#popup-last-events').find('h3').removeClass().addClass('week-'+$(this).attr('data-week'));
-                $.magnificPopup.open({
-                    items: {
-                        src: '#popup-last-events'
-                    },
-                    type: 'inline',
-                    mainClass: 'popup-last-events'
+                    $('#popup-last-events').find('h3').removeClass().addClass('week-' + $(this).attr('data-week'));
+                    $.magnificPopup.open({
+                        items: {
+                            src: '#popup-last-events'
+                        },
+                        type: 'inline',
+                        mainClass: 'popup-last-events'
+                    });
                 });
             });
-            /*$('.image-link').magnificPopup({
-                type: 'image',
-                callbacks: {
-                    elementParse: function(item) {
-                        // Function will fire for each target element
-                        // "item.el" is a target DOM element (if present)
-                        // "item.src" is a source that you may modify
-
-                        console.log(item); // Do whatever you want with "item" object
-                    }
-                }
-            });*/
         },
 
-        initModalNotice: function( mess ) {
-            $('#modal-notice').find('.box-mess').html( mess );
+        initModalNotice: function(mess) {
+            $('#modal-notice').find('.box-mess').html(mess);
 
             $.magnificPopup.open({
                 items: {
@@ -239,15 +229,6 @@ var isMobile = {
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 responsive: [
-                    /*{
-                      breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
-                      }
-                    },*/
                     {
                         breakpoint: 768,
                         settings: {
