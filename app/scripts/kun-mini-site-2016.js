@@ -97,6 +97,8 @@ var isMobile = {
                         '</div>');
                     var tempContent = null;
 
+                    $('#popup-last-events').find('.mCSB_container').html('');
+
                     $(_this.attr('data-src-img').split(',')).each(function(idx, elm) {
                         tempContent = contentInfo.clone();
                         tempContent.appendTo($('#popup-last-events').find('.mCSB_container'));

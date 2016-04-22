@@ -16,6 +16,10 @@ header {
 
 		.main-nav {
 			text-align: center;
+			padding: 0 17% 0 0;
+			@include respond-to( ipad ) {
+				padding: 0;
+			}
 			@include respond-to(mobile){
 				position: absolute;
 				width: 100%;
@@ -26,18 +30,22 @@ header {
 			}
 			a {
 				font-family: $font-uvnR;
-				font-size: 16px;
 				color: #005146;
-				padding: 10px 25px;
+				font-size: 14px;
+				padding: 10px;
 				font-weight: bold;
 				text-transform: uppercase;
 				display: inline-block;
 				@include border-radius( 19px, 19px, 19px, 19px );
-				@include respond-to(ipad){
-					font-size: 14px;
-					padding: 10px 15px;
+				@include screen( big ) {
+					font-size: 16px;
+					padding: 10px 25px;
 				}
-				@include respond-to(mobile){
+				@include respond-to(ipad) {
+					font-size: 14px;
+					padding: 10px;
+				}
+				@include respond-to(mobile) {
 					display:block;
 					line-height: 20px;
 					background: #fff;

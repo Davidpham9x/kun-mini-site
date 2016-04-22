@@ -135,7 +135,8 @@ $grid: 30px;
 $breakpoints: (
 	small: 480px,
 	medium: 768px,
-	large: 1280px
+	large: 1280px,
+	big: 1366px,
 );
 
 @mixin screen($breakpoint) {

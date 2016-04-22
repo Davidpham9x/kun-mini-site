@@ -113,6 +113,10 @@
                         }
                         .thumbnail {
                             position: relative;
+                            margin: 0;
+                            border: none;
+                            padding: 0;
+                            background-color: transparent;
                             @include respond-to(mobile) {
                                 margin: 10px 0;
                             }
@@ -139,6 +143,15 @@
                                     left: 47%;
                                 }
                             }
+                        }
+                        .thumbnail-title {
+                            font-size: 14px;
+                            font-family: $font-uvnB;
+                            display: inline-block;
+                            color: #147ec8;
+                            margin: 10px auto 0;
+                            max-width: 250px;
+                            min-height: 36px;
                         }
                     }
                 }
