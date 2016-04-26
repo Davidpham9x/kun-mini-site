@@ -44,10 +44,10 @@
 				    @include respond-to(mobile) {
 				        float: none;
                         width: 100%;
-                        padding: 10px 10px 0;
-                        &:first-child {
+                        padding: 0 10px 10px;
+                        /* &:first-child {
                             padding-top: 0;
-                        }
+                        } */
 				    }
 
 				    .desc {
